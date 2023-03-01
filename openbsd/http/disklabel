@@ -1,0 +1,6 @@
+/       6G
+swap    2G
+/tmp    4G
+/var    6G
+/usr    12G
+/home   9G-*

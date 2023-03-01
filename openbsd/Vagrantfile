@@ -1,0 +1,26 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.define :puffy do |puffy_config|
+        puffy_config.vm.box = "tvlooy/openbsd-7.2-amd64"
+
+        puffy_config.vm.provider "virtualbox" do |v|
+            # show a display for easy debugging
+            v.gui = false
+
+            # RAM size
+            v.memory = 2048
+        end
+
+        puffy_config.vm.network "private_network", ip: "192.168.33.226"
+        puffy_config.vm.synced_folder ".", "/vagrant", type: "nfs", mount_options: ['tcp']
+
+
+        puffy_config.ssh.forward_agent = true
+
+        #puffy_config.vm.provision :shell, :path => "shell_provisioner/run.sh"
+    end
+end
