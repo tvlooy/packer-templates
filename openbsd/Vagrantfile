@@ -5,7 +5,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define :puffy do |puffy_config|
-        puffy_config.vm.box = "tvlooy/openbsd-7.2-amd64"
+        puffy_config.vm.box = "tvlooy/openbsd-7.3-amd64"
 
         puffy_config.vm.provider "virtualbox" do |v|
             # show a display for easy debugging
