@@ -14,8 +14,8 @@
       "headless": "{{user `headless`}}",
       "http_directory": "http",
       "iso_checksum": "{{user `iso_checksum_type`}}:{{user `iso_checksum`}}",
-      "iso_url": "{{user `mirror`}}/12.0.0/amd64/iso-cd/debian-12.0.0-amd64-netinst.iso",
-      "output_directory": "output-debian-12.0-amd64-{{build_type}}",
+      "iso_url": "{{user `mirror`}}/12.8.0/amd64/iso-cd/debian-12.8.0-amd64-netinst.iso",
+      "output_directory": "output-debian-12.8-amd64-{{build_type}}",
       "shutdown_command": "sudo systemctl poweroff",
       "ssh_password": "vagrant",
       "ssh_timeout": "{{user `ssh_timeout`}}",
@@ -47,13 +47,13 @@
           "off"
         ]
       ],
-      "vm_name": "packer-debian-12.0-amd64"
+      "vm_name": "packer-debian-12.8-amd64"
     }
   ],
   "post-processors": [
     {
       "compression_level": "{{user `compression_level`}}",
-      "output": "debian-12.0-amd64-{{.Provider}}.box",
+      "output": "debian-12.8-amd64-{{.Provider}}.box",
       "type": "vagrant"
     }
   ],
@@ -74,7 +74,7 @@
     "cpus": "1",
     "disk_size": "50000",
     "headless": "false",
-    "iso_checksum": "3b0e9718e3653435f20d8c2124de6d363a51a1fd7f911b9ca0c6db6b3d30d53e",
+    "iso_checksum": "04396d12b0f377958a070c38a923c227832fa3b3e18ddc013936ecf492e9fbb3",
     "iso_checksum_type": "sha256",
     "memory": "2048",
     "mirror": "http://cdimage.debian.org/debian-cd",
