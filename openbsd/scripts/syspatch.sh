@@ -14,6 +14,6 @@ if [[ `doas syspatch -c | wc -l | xargs` -gt 0 ]]; then
     fi
   done
 
-  doas syspatch
+#  doas syspatch
 
 fi
