@@ -16,9 +16,9 @@
       "guest_os_type": "OpenBSD_64",
       "headless": "false",
       "http_directory": "http",
-      "iso_checksum": "sha256:09d795baaf654f912382c2c9722bc731891c661359686378708c665df60f4e62",
-      "iso_url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/7.8/amd64/cd78.iso",
-      "output_directory": "output-openbsd-7.8-amd64-{{build_type}}",
+      "iso_checksum": "sha256:f52aac4a19d1bb4a12712b4f169d0cfc41408a03f3a444d2e0e89886d2a2af51",
+      "iso_url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/8.0/amd64/cd80.iso",
+      "output_directory": "output-openbsd-8.0-amd64-{{build_type}}",
       "shutdown_command": "doas shutdown -h -p now",
       "ssh_password": "vagrant",
       "ssh_timeout": "60m",
@@ -38,13 +38,13 @@
           "1"
         ]
       ],
-      "vm_name": "packer-openbsd-7.8-amd64"
+      "vm_name": "packer-openbsd-8.0-amd64"
     }
   ],
   "post-processors": [
     {
       "compression_level": "6",
-      "output": "openbsd-7.8-amd64-{{.Provider}}.box",
+      "output": "openbsd-8.0-amd64-{{.Provider}}.box",
       "type": "vagrant"
     }
   ],
